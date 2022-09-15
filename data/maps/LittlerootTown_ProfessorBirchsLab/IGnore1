@@ -1,0 +1,62 @@
+mapscripts MAP_Mapscripts {}
+
+script MAP_EventScript_Pokeball{
+
+    lockall
+    showmonpic(Species_MUDKIP, 10,3)
+    msgbox("Do you want to Choose MudKip?", MSGBOX_YESNO)
+    if(var(Var_result) == YES){ 
+        givemon(SPECIES_MUDKIP, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Received Mudkip")
+        removeobject(7)
+        setflag(Flag_unused_0x493)
+        call(NicknamePartyMon)
+    }
+    elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Received Mudkip")
+        removeobject(1)
+        setflag(FLAG_UNUSED_0x493)
+        call(NicknameBoxMon)
+    }
+    else{
+        hidemonpic
+        msgbox("No More Room")
+    }
+}
+else{
+    hidemonpic
+    msgbox(NewProfessor_NotChosen)
+}
+waitmessage
+releaseall
+end
+
+}
+
+script NicknamePartyMon{
+
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventSCript_GetGiftMonPartSlot)
+        call(CommonEventSCript_NameReceivedPartyMon)
+    }
+}
+
+script NicknameBoxMon{
+
+    msgbox("Give it a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventSCript_NameReceivedBoxMon)
+    }
+    call(Common_EventScript_TransferredToPC)
+
+}
+
+text NewProfessor_NotChosen{
+    "You did not choose the Pokemon"
+}

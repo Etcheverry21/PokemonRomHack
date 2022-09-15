@@ -453,11 +453,15 @@ LittlerootTown_EventScript_BirchsLabSign::
 	msgbox LittlerootTown_Text_ProfBirchsLab, MSGBOX_SIGN
 	end
 
+LittlerootTown_EventScript_House1Sign::
+	msgbox LittlerootTown_Text_House1, MSGBOX_SIGN
+	end
+
 LittlerootTown_EventScript_BrendansHouseSign::
 	lockall
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_PlayersHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_BirchsHouseSignFemale
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_PlayersHouseSignFemale
 	releaseall
 	end
 
@@ -1066,13 +1070,25 @@ LittlerootTown_Text_TownSign:
 	.string "“A town that can't be shaded any hue.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "PROF. BIRCH'S POKéMON LAB$"
+	.string "PROF. MIKALES' POKéMON LAB$"
+
+LittlerootTown_Text_House1:
+	.string "House 1$"	
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"
 
 LittlerootTown_Text_ProfBirchsHouse:
 	.string "PROF. BIRCH'S HOUSE$"
+
+Littleroot_BikeShop_EventScript_BikeShopSign::
+	msgbox Littleroot_Text_BikeShopSign, MSGBOX_SIGN
+	end
+
+Littleroot_Text_BikeShopSign:
+	.string "“Ride in gravel and shake up your\n"
+	.string "soul!”\l"
+	.string "JIMMY'S CYCLES$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
