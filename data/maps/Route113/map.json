@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "direction": "down",
-      "offset": 60,
-      "map": "MAP_ROUTE112"
-    },
-    {
       "direction": "left",
       "offset": 0,
       "map": "MAP_FALLARBOR_TOWN"
@@ -26,7 +21,22 @@
     {
       "direction": "right",
       "offset": 0,
-      "map": "MAP_ROUTE111"
+      "map": "MAP_ROUTE112"
+    },
+    {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_ROUTE114"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_ROUTE107"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_ROUTE117"
     }
   ],
   "object_events": [
@@ -451,7 +461,7 @@
       "y": 5,
       "elevation": 3,
       "item": "ITEM_TM32",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_TM32"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_113_TM_32"
     },
     {
       "type": "hidden_item",
