@@ -16,7 +16,7 @@
     {
       "direction": "up",
       "offset": 0,
-      "map": "MAP_ROUTE124"
+      "map": "MAP_ROUTE125"
     },
     {
       "direction": "right",
@@ -24,9 +24,9 @@
       "map": "MAP_ROUTE127"
     },
     {
-      "direction": "dive",
+      "direction": "down",
       "offset": 0,
-      "map": "MAP_UNDERWATER_ROUTE126"
+      "map": "MAP_ROUTE129"
     }
   ],
   "object_events": [
@@ -148,7 +148,13 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }
