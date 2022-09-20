@@ -110,7 +110,10 @@
     "House4",
     "House5",
     "Littleroot_BikeShop",
-    "Littleroot_Cave1"
+    "Littleroot_Cave1",
+    "Littleroot_House6",
+    "Littleroot_Gym_1F",
+    "Littleroot_Gym_2F"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
