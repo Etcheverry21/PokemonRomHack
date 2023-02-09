@@ -14,19 +14,39 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+<<<<<<< HEAD
       "map": "MAP_ROUTE104",
       "offset": 0,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE106",
+=======
+      "direction": "down",
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
       "offset": 0,
       "direction": "down"
     },
     {
+<<<<<<< HEAD
       "map": "MAP_UNDERWATER_ROUTE105",
       "offset": 0,
       "direction": "dive"
+=======
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE104"
+    },
+    {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_ROUTE127"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_ROUTE110"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -144,7 +164,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "hidden_item",

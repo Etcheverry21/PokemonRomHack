@@ -16,6 +16,7 @@
     {
       "map": "MAP_ROUTE128",
       "offset": 0,
+<<<<<<< HEAD
       "direction": "up"
     },
     {
@@ -27,6 +28,14 @@
       "map": "MAP_UNDERWATER_ROUTE129",
       "offset": 0,
       "direction": "dive"
+=======
+      "map": "MAP_ROUTE126"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE128"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -96,7 +105,13 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
-  "bg_events": []
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
 }

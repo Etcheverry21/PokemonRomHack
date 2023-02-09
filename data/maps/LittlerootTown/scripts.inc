@@ -1,7 +1,8 @@
-.set LOCALID_TWIN, 1
-.set LOCALID_MOM, 4
+.set LOCALID_TIMMY, 3
+.set LOCALID_MOM, 1
 .set LOCALID_RIVAL, 7
 .set LOCALID_BIRCH, 8
+.set LOCALID_TWIN, 9
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
@@ -43,7 +44,7 @@ LittlerootTown_OnTransition:
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call Common_EventScript_SetupRivalGfxId
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_MoveMomToMaysDoor
-	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
+	call_if_unset FLAG_RESCUED_BIRCH, Littleroot_EventScript_BlockNorthEntrance
 	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_MAY, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
@@ -76,7 +77,7 @@ LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent::
 	return
 
 LittlerootTown_EventScript_MoveMomToMaysDoor::
-	setobjectxyperm LOCALID_MOM, 14, 8
+	setobjectxyperm LOCALID_MOM, 28, 57
 	return
 
 LittlerootTown_EventScript_SetTwinPos::
@@ -99,11 +100,11 @@ LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos::
 	return
 
 LittlerootTown_EventScript_SetMomInFrontOfDoorMale::
-	setobjectxyperm LOCALID_MOM, 5, 9
+	setobjectxyperm LOCALID_MOM, 28, 57
 	return
 
 LittlerootTown_EventScript_SetMomInFrontOfDoorFemale::
-	setobjectxyperm LOCALID_MOM, 14, 9
+	setobjectxyperm LOCALID_MOM, 28, 57
 	return
 
 LittlerootTown_OnFrame:
@@ -114,8 +115,8 @@ LittlerootTown_OnFrame:
 
 LittlerootTown_EventScript_StepOffTruckMale::
 	lockall
-	setvar VAR_0x8004, 5
-	setvar VAR_0x8005, 8
+	setvar VAR_0x8004, 28
+	setvar VAR_0x8005, 57
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
 	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
@@ -125,11 +126,11 @@ LittlerootTown_EventScript_StepOffTruckMale::
 
 LittlerootTown_EventScript_StepOffTruckFemale::
 	lockall
-	setvar VAR_0x8004, 14
-	setvar VAR_0x8005, 8
+	setvar VAR_0x8004, 28
+	setvar VAR_0x8005, 57
 	call LittlerootTown_EventScript_GoInsideWithMom
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
+	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
 	waitstate
 	releaseall
 	end
@@ -206,6 +207,57 @@ LittlerootTown_Movement_PlayerStepOffTruck:
 	delay_16
 	delay_16
 	step_end
+
+Littleroot_EventScript_BlockNorthEntrance::
+	setobjectxyperm LOCALID_TIMMY, 35, 52
+	setobjectmovementtype LOCALID_TIMMY, MOVEMENT_TYPE_FACE_UP
+	return
+
+Littleroot_EventScript_Timmy::
+	lock
+	faceplayer
+	call_if_unset FLAG_ADVENTURE_STARTED, Littleroot_EventScript_NotBlockingPath
+	msgbox Littleroot_Text_SweepingArea, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_TIMMY, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+Littleroot_EventScript_BlockedPath::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Littleroot_Movement_PlayerStepBack
+	applymovement LOCALID_TIMMY, Littleroot_Movement_BackUp
+	waitmovement 0
+	msgbox Littleroot_Text_WaitDontComeInHere, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_TIMMY, Littleroot_Movement_ReturnToOriginalPosition
+	waitmovement 0
+	releaseall
+	end
+
+Littleroot_EventScript_NotBlockingPath::
+	msgbox Littleroot_Text_FinsishedSweepingArea, MSGBOX_DEFAULT
+	release
+	end
+
+Littleroot_Movement_PlayerStepBack:
+	delay_8
+	walk_down
+	step_end
+
+Littleroot_Movement_BackUp:
+	walk_fast_right
+	walk_in_place_faster_up
+	lock_facing_direction
+	walk_down
+	unlock_facing_direction
+	step_end
+
+Littleroot_Movement_ReturnToOriginalPosition:
+	walk_left
+	walk_up
+	step_end	
 
 LittlerootTown_EventScript_BeginDexUpgradeScene::
 	lockall
@@ -400,11 +452,15 @@ LittlerootTown_EventScript_BirchsLabSign::
 	msgbox LittlerootTown_Text_ProfBirchsLab, MSGBOX_SIGN
 	end
 
+LittlerootTown_EventScript_House1Sign::
+	msgbox LittlerootTown_Text_House1, MSGBOX_SIGN
+	end
+
 LittlerootTown_EventScript_BrendansHouseSign::
 	lockall
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_PlayersHouseSignMale
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_BirchsHouseSignFemale
+	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_EventScript_PlayersHouseSignFemale
 	releaseall
 	end
 
@@ -909,17 +965,30 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	delay 30
 	return
 
+	Littleroot_Text_WaitDontComeInHere:
+	.string "Aaaaah! Wait!\n"
+	.string "Move Back!\p"
+	.string "We are sweeping the area\n"
+	.string "to be sure you're safe!\p"
+
+Littleroot_Text_SweepingArea:
+	.string "It's not safe just yet.\p"
+	.string "We are sweeping the area\n"
+	.string "to be sure you're safe!$"	
+
+Littleroot_Text_FinsishedSweepingArea:
+	.string "We have finished sweeping the area!\p"
+	.string "You are now safe to explore the\n"
+	.string "entire area!$"
+
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-	.string "MOM: {PLAYER}, we're here, honey!\p"
-	.string "It must be tiring riding with our things\n"
-	.string "in the moving truck.\p"
-	.string "Well, this is LITTLEROOT TOWN.\p"
-	.string "How do you like it?\n"
-	.string "This is our new home!\p"
-	.string "It has a quaint feel, but it seems to be\n"
-	.string "an easy place to live, don't you think?\p"
-	.string "And, you get your own room, {PLAYER}!\n"
-	.string "Let's go inside.$"
+	.string "MOM: {PLAYER}, you're safe!\p"
+	.string "I'm so glad you we're able to run\n"
+	.string "away and escape.\p"
+	.string "This is the new home the FBI\n"
+	.string "has set up for us.\p"
+	.string "HURRY!\p"
+	.string "Let's get you inside and safe!\p"
 
 LittlerootTown_Text_WaitPlayer:
 	.string "MOM: Wait, {PLAYER}!$"
@@ -1000,13 +1069,25 @@ LittlerootTown_Text_TownSign:
 	.string "“A town that can't be shaded any hue.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
-	.string "PROF. BIRCH'S POKéMON LAB$"
+	.string "PROF. MIKALES' POKéMON LAB$"
+
+LittlerootTown_Text_House1:
+	.string "House 1$"	
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"
 
 LittlerootTown_Text_ProfBirchsHouse:
 	.string "PROF. BIRCH'S HOUSE$"
+
+Littleroot_BikeShop_EventScript_BikeShopSign::
+	msgbox Littleroot_Text_BikeShopSign, MSGBOX_SIGN
+	end
+
+Littleroot_Text_BikeShopSign:
+	.string "“Ride in gravel and shake up your\n"
+	.string "soul!”\l"
+	.string "JIMMY'S CYCLES$"
 
 LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "PROF. BIRCH: Well, well, {PLAYER}{KUN}!\n"
@@ -1018,4 +1099,3 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
-

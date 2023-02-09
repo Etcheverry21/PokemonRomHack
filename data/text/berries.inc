@@ -134,23 +134,23 @@ Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife:
 Route123_BerryMastersHouse_Text_Ah:
 	.string "Ah…$"
 
-Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
+House5_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
 	.string "Hello!\p"
 	.string "This is the PRETTY PETAL flower shop.\n"
 	.string "Spreading flowers all over the world!$"
 
-Route104_PrettyPetalFlowerShop_Text_LearnAboutBerries:
+House5_PrettyPetalFlowerShop_Text_LearnAboutBerries:
 	.string "{PLAYER}{KUN}, would you like to learn about\n"
 	.string "BERRIES?$"
 
-Route104_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries:
+House5_PrettyPetalFlowerShop_Text_IntroLearnAboutBerries:
 	.string "Your name is?\p"
 	.string "{PLAYER}{KUN}.\n"
 	.string "That's a nice name.\p"
 	.string "{PLAYER}{KUN}, would you like to learn about\n"
 	.string "BERRIES?$"
 
-Route104_PrettyPetalFlowerShop_Text_BerriesExplanation:
+House5_PrettyPetalFlowerShop_Text_BerriesExplanation:
 	.string "BERRIES grow on trees that thrive\n"
 	.string "only in soft, loamy soil.\p"
 	.string "If you take some BERRIES, be sure to\n"
@@ -164,18 +164,18 @@ Route104_PrettyPetalFlowerShop_Text_BerriesExplanation:
 	.string "Please help me, {PLAYER}{KUN}. Plant BERRIES\n"
 	.string "and bring more flowers into the world.$"
 
-Route104_PrettyPetalFlowerShop_Text_FlowersBringHappiness:
+House5_PrettyPetalFlowerShop_Text_FlowersBringHappiness:
 	.string "Flowers bring so much happiness to\n"
 	.string "people, don't they?$"
 
-Route104_PrettyPetalFlowerShop_Text_YouCanHaveThis:
+House5_PrettyPetalFlowerShop_Text_YouCanHaveThis:
 	.string "Hello!\p"
 	.string "The more attention you give to flowers,\n"
 	.string "the more beautifully they bloom.\p"
 	.string "You'll like tending flowers. I'm sure\n"
 	.string "of it. You can have this.$"
 
-Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
+House5_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
 	.string "While BERRY plants are growing,\n"
 	.string "water them with the WAILMER PAIL.\p"
 	.string "Oh, another thing.\p"
@@ -185,13 +185,13 @@ Route104_PrettyPetalFlowerShop_Text_WailmerPailExplanation:
 	.string "Isn't that awesome?\n"
 	.string "It's like they have the will to live.$"
 
-Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers:
+House5_PrettyPetalFlowerShop_Text_ImGrowingFlowers:
 	.string "I'm trying to be like my big sisters.\n"
 	.string "I'm growing flowers, too!\p"
 	.string "Here you go!\n"
 	.string "It's for you!$"
 
-Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries:
+House5_PrettyPetalFlowerShop_Text_MachineMixesBerries:
 	.string "You can plant a BERRY and grow it big,\n"
 	.string "or you can make a POKéMON hold it.\p"
 	.string "But now they have a machine that mixes\n"

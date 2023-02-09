@@ -14,19 +14,34 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+<<<<<<< HEAD
       "map": "MAP_MOSSDEEP_CITY",
       "offset": 0,
       "direction": "down"
     },
     {
       "map": "MAP_ROUTE124",
+=======
+      "direction": "right",
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
       "offset": 0,
       "direction": "left"
     },
     {
+<<<<<<< HEAD
       "map": "MAP_UNDERWATER_ROUTE125",
       "offset": 0,
       "direction": "dive"
+=======
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_ROUTE123"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_ROUTE126"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -170,7 +185,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "secret_base",

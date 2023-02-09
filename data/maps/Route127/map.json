@@ -16,12 +16,16 @@
     {
       "map": "MAP_MOSSDEEP_CITY",
       "offset": 0,
+<<<<<<< HEAD
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE128",
       "offset": 0,
       "direction": "down"
+=======
+      "map": "MAP_ROUTE124"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     },
     {
       "map": "MAP_ROUTE126",
@@ -29,9 +33,20 @@
       "direction": "left"
     },
     {
+<<<<<<< HEAD
       "map": "MAP_UNDERWATER_ROUTE127",
       "offset": 0,
       "direction": "dive"
+=======
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_ROUTE128"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE105"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -179,8 +194,12 @@
       "flag": "FLAG_ITEM_ROUTE_127_RARE_CANDY"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "secret_base",

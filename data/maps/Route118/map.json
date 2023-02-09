@@ -14,6 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+<<<<<<< HEAD
       "map": "MAP_ROUTE119",
       "offset": 40,
       "direction": "up"
@@ -27,6 +28,11 @@
       "map": "MAP_ROUTE123",
       "offset": 0,
       "direction": "right"
+=======
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_MAUVILLE_CITY"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [

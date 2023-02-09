@@ -14,14 +14,29 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+<<<<<<< HEAD
       "map": "MAP_VERDANTURF_TOWN",
       "offset": 80,
       "direction": "down"
+=======
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE115"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_ROUTE112"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     },
     {
       "map": "MAP_RUSTBORO_CITY",
       "offset": 0,
+<<<<<<< HEAD
       "direction": "left"
+=======
+      "map": "MAP_ROUTE117"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [

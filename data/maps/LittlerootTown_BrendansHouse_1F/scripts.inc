@@ -289,15 +289,16 @@ LittlerootTown_BrendansHouse_1F_Movement_BrendanGoUpstairs2:
 
 PlayersHouse_1F_Text_IsntItNiceInHere:
 	.string "MOM: See, {PLAYER}?\n"
-	.string "Isn't it nice in here, too?$"
+	.string "you are safe now.$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "The mover's POKéMON do all the work\n"
-	.string "of moving us in and cleaning up after.\l"
+	.string "The FBI's POKéMON do all the work\n"
+	.string "of moving us in and with your father\l"
+	.string "missing, I'm very stressed out right now.\p"
 	.string "This is so convenient!\p"
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
-	.string "DAD bought you a new clock to mark\n"
+	.string "I bought you a new clock to mark\n"
 	.string "our move here.\l"
 	.string "Don't forget to set it!$"
 
@@ -315,19 +316,18 @@ PlayersHouse_1F_Text_OhComeQuickly:
 	.string "Quick! Come quickly!$"
 
 PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MOM: Look! It's PETALBURG GYM!\n"
-	.string "Maybe DAD will be on!$"
+	.string "MOM: Look! It's the News!\n"
+	.string "Maybe DADs case will be on!$"
 
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
 	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
+	.string "Maybe it's best we dont watch.$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
-	.string "PROF. BIRCH is his name.\p"
-	.string "He lives right next door, so you should\n"
+	.string "One of the FBI agents lives in town.\p"
+	.string "PROF. MIKALES is his name.\p"
+	.string "He lives in the neighborhood, you should\n"
 	.string "go over and introduce yourself.$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
@@ -335,7 +335,7 @@ PlayersHouse_1F_Text_SeeYouHoney:
 
 PlayersHouse_1F_Text_DidYouMeetProfBirch:
 	.string "MOM: Did you introduce yourself to\n"
-	.string "PROF. BIRCH?$"
+	.string "PROF. MIKALES?$"
 
 PlayersHouse_1F_Text_YouShouldRestABit:
 	.string "MOM: How are you doing, {PLAYER}?\n"

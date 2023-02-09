@@ -19,9 +19,20 @@
       "direction": "up"
     },
     {
+<<<<<<< HEAD
       "map": "MAP_DEWFORD_TOWN",
       "offset": 60,
       "direction": "down"
+=======
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_ROUTE101"
+    },
+    {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_ROUTE128"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -100,7 +111,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "hidden_item",

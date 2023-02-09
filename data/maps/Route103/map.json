@@ -10,10 +10,11 @@
   "allow_cycling": true,
   "allow_escaping": false,
   "allow_running": true,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+<<<<<<< HEAD
       "map": "MAP_OLDALE_TOWN",
       "offset": 0,
       "direction": "down"
@@ -22,6 +23,26 @@
       "map": "MAP_ROUTE110",
       "offset": -60,
       "direction": "right"
+=======
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_ROUTE108"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_LITTLEROOT_TOWN"
+    },
+    {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_ROUTE104"
+    },
+    {
+      "direction": "right",
+      "offset": 0,
+      "map": "MAP_PETALBURG_CITY"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -295,7 +316,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

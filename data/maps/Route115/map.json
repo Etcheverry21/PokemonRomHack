@@ -14,6 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+<<<<<<< HEAD
       "map": "MAP_RUSTBORO_CITY",
       "offset": 0,
       "direction": "down"
@@ -22,6 +23,16 @@
       "map": "MAP_ROUTE114",
       "offset": -40,
       "direction": "right"
+=======
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_ROUTE116"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_ROUTE111"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -166,7 +177,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route115_EventScript_ItemTM01",
-      "flag": "FLAG_ITEM_ROUTE_115_TM01"
+      "flag": "FLAG_ITEM_ROUTE_115_TM_01"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -348,7 +359,9 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "secret_base",

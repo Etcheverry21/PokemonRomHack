@@ -14,14 +14,29 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+<<<<<<< HEAD
       "map": "MAP_ROUTE118",
       "offset": -40,
       "direction": "down"
+=======
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_ROUTE114"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     },
     {
       "map": "MAP_FORTREE_CITY",
       "offset": 0,
+<<<<<<< HEAD
       "direction": "right"
+=======
+      "map": "MAP_ROUTE117"
+    },
+    {
+      "direction": "left",
+      "offset": 0,
+      "map": "MAP_ROUTE120"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [

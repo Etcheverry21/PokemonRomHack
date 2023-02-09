@@ -16,17 +16,30 @@
     {
       "map": "MAP_MAUVILLE_CITY",
       "offset": 0,
+<<<<<<< HEAD
       "direction": "down"
+=======
+      "map": "MAP_ROUTE109"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     },
     {
       "map": "MAP_ROUTE113",
       "offset": 0,
+<<<<<<< HEAD
       "direction": "left"
     },
     {
       "map": "MAP_ROUTE112",
       "offset": 20,
       "direction": "left"
+=======
+      "map": "MAP_ROUTE112"
+    },
+    {
+      "direction": "up",
+      "offset": 0,
+      "map": "MAP_ROUTE115"
+>>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
@@ -262,7 +275,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route111_EventScript_ItemTM37",
-      "flag": "FLAG_ITEM_ROUTE_111_TM37"
+      "flag": "FLAG_ITEM_ROUTE_111_TM_37"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
