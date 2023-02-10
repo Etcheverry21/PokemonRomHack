@@ -14,31 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-<<<<<<< HEAD
-      "map": "MAP_ROUTE126",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
-      "map": "MAP_LILYCOVE_CITY",
-      "offset": 10,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_ROUTE125",
-      "offset": 0,
-      "direction": "right"
-    },
-    {
-      "map": "MAP_MOSSDEEP_CITY",
-      "offset": 40,
-      "direction": "right"
-    },
-    {
-      "map": "MAP_UNDERWATER_ROUTE124",
-      "offset": 0,
-      "direction": "dive"
-=======
       "direction": "up",
       "offset": 0,
       "map": "MAP_ROUTE122"
@@ -57,7 +32,6 @@
       "direction": "left",
       "offset": 0,
       "map": "MAP_ROUTE125"
->>>>>>> da46ea0ae8bb6c2cf5180bbef91e99abae63b571
     }
   ],
   "object_events": [
